@@ -1,17 +1,14 @@
 package com.bridgelabz.gambling;
 
 public class GamblingSimulationProblem {
-	final static int INITIAL = 100, BET = 1;
+	final static int STAKE = 100, BET = 1;
 	
 	public static void bet() {
-		if(Math.random() > 0.5) {
-			int win = INITIAL+1;
-			System.out.println("the gambler won, and the total is:"+win);
-		}
-		else {
-			int loose = INITIAL-1;
-			System.out.println("the gambler lost, and the total is:"+loose);
-		}
+		final int random = (int) (Math.random() * 2);
+		if (random == 0) 
+			System.out.println("the gambler won ");
+		else 
+			System.out.println("the gambler lost ");
 	}
 
 	public static void main(String[] args) {
